@@ -16,7 +16,6 @@ fireStationPfaffenhofen.vehicles.push(
   new LF20(fireStationPfaffenhofen),
   new LF20(fireStationPfaffenhofen),
   new LF20(fireStationPfaffenhofen),
-  new LF20(fireStationPfaffenhofen),
   new FireLadder(fireStationPfaffenhofen),
   new FireLadder(fireStationPfaffenhofen)
 );
@@ -34,4 +33,6 @@ s.stations.push(fireStationPfaffenhofen);
 s.emergencies.push(new HouseFire("Neumarkter Weg 13"));
 s.emergencies.push(new HouseFire("Kastler Straße 10"));
 
+s.tick();
+s.tick();
 s.tick();

@@ -15,20 +15,28 @@ export class Simulation {
   tick() {
     this.emergencies.forEach(emergency => {
       if (!emergency.needsFurtherVehicles()) {
-        console.log("No dispatch needed...", emergency);
+        console.log("No dispatch needed for ", emergency.description());
         return;
       }
 
       this.dispatchVehicles(emergency);
     });
+
+    console.log("-- TICK END");
   }
 
   dispatchVehicles(emergency: Emergency) {
-    emergency.requiredVehicles.forEach(requirement => {
+    for (let index = 0; index < emergency.requiredVehicles.length; index++) {
+      const requirement = emergency.requiredVehicles[index];
       const vehicles = this.findAvailableMatchingVehicles(requirement);
 
       if (vehicles.length === 0) {
-        console.log("No matching Vehicles found...");
+        console.log(
+          "No available or matching Vehicles found for",
+          emergency.description()
+        );
+
+        break;
       }
 
       vehicles.forEach(vehicle => {
@@ -48,12 +56,10 @@ export class Simulation {
           "from",
           vehicle.station.name,
           "to a",
-          emergency.constructor.name,
-          "at",
-          emergency.location || "<Unknown-Location>"
+          emergency.description()
         );
       });
-    });
+    }
   }
 
   findAvailableMatchingVehicles(requirement: VehicleRequirement) {

@@ -48,4 +48,9 @@ export abstract class Emergency {
 
     return false;
   }
+
+  description() {
+    return `${this.constructor.name} at ${this.location ||
+      "<Unknown-Location>"}`;
+  }
 }
