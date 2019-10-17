@@ -47,8 +47,10 @@ export class Simulation {
           vehicle.constructor.name,
           "from",
           vehicle.station.name,
-          "to",
-          emergency.constructor.name
+          "to a",
+          emergency.constructor.name,
+          "at",
+          emergency.location || "<Unknown-Location>"
         );
       });
     });

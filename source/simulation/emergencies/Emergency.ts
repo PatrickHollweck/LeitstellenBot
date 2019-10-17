@@ -1,16 +1,19 @@
 import { VehicleRequirement } from "./VehicleRequirement";
-import { EmergencyVehicle } from "../vehicles/EmergencyVehicle";
+import { EmergencyVehicle, VehicleState } from "../vehicles/EmergencyVehicle";
 
 export abstract class Emergency {
+  public location?: string;
   public requiredVehicles: VehicleRequirement[];
   public dispatchedVehicles: EmergencyVehicle[];
 
-  constructor(requiredVehicles: VehicleRequirement[]) {
+  constructor(requiredVehicles: VehicleRequirement[], location?: string) {
+    this.location = location;
     this.dispatchedVehicles = [];
     this.requiredVehicles = requiredVehicles;
   }
 
   enroute(vehicle: EmergencyVehicle) {
+    vehicle.state = VehicleState.Enroute;
     this.dispatchedVehicles.push(vehicle);
   }
 

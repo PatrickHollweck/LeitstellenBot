@@ -31,6 +31,7 @@ fireStationKastl.vehicles.push(
 // -- Setup Simulation
 s.stations.push(fireStationPfaffenhofen);
 
-s.emergencies.push(new HouseFire());
+s.emergencies.push(new HouseFire("Neumarkter Weg 13"));
+s.emergencies.push(new HouseFire("Kastler Straße 10"));
 
 s.tick();

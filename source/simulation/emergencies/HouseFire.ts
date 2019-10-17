@@ -6,10 +6,13 @@ import { HoseEngine } from "../vehicles/firedept/HoseEngine";
 import { FireLadder } from "../vehicles/firedept/FireLadder";
 
 export class HouseFire extends Emergency {
-  constructor() {
-    super([
-      new VehicleRequirement(HoseEngine, 2),
-      new VehicleRequirement(FireLadder, 1)
-    ]);
+  constructor(location?: string) {
+    super(
+      [
+        new VehicleRequirement(HoseEngine, 2),
+        new VehicleRequirement(FireLadder, 1)
+      ],
+      location
+    );
   }
 }
