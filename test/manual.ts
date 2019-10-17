@@ -15,11 +15,22 @@ const fireStationPfaffenhofen = new Station("FFW Pfaffenhofen");
 fireStationPfaffenhofen.vehicles.push(
   new LF20(fireStationPfaffenhofen),
   new LF20(fireStationPfaffenhofen),
+  new LF20(fireStationPfaffenhofen),
+  new LF20(fireStationPfaffenhofen),
+  new FireLadder(fireStationPfaffenhofen),
   new FireLadder(fireStationPfaffenhofen)
+);
+
+const fireStationKastl = new Station("FFW Kastl");
+
+fireStationKastl.vehicles.push(
+  new LF20(fireStationKastl),
+  new LF20(fireStationKastl)
 );
 
 // -- Setup Simulation
 s.stations.push(fireStationPfaffenhofen);
+
 s.emergencies.push(new HouseFire());
 
-s.dispatchVehicles();
+s.tick();
