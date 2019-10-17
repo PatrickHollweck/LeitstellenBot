@@ -78,4 +78,13 @@ export class Simulation {
 
     return available;
   }
+
+  resolveEmergency(emergency: Emergency) {
+    console.log("The", emergency.description(), "has been resolved");
+
+    emergency.resolve();
+
+    const index = this.emergencies.findIndex(x => x === emergency);
+    this.emergencies.splice(index, 1);
+  }
 }

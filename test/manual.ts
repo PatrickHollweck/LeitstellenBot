@@ -27,12 +27,25 @@ fireStationKastl.vehicles.push(
   new LF20(fireStationKastl)
 );
 
+const fireStationLauterhofen = new Station("FFW Lauterhofen");
+
+fireStationKastl.vehicles.push(
+  new LF20(fireStationLauterhofen),
+  new LF20(fireStationLauterhofen)
+);
+
 // -- Setup Simulation
+s.stations.push(fireStationKastl);
+s.stations.push(fireStationLauterhofen);
 s.stations.push(fireStationPfaffenhofen);
 
 s.emergencies.push(new HouseFire("Neumarkter Weg 13"));
 s.emergencies.push(new HouseFire("Kastler Straße 10"));
+s.emergencies.push(new HouseFire("Dorfplatz Lauterhofen"));
 
 s.tick();
+
+s.resolveEmergency(s.emergencies[0]);
+
 s.tick();
 s.tick();

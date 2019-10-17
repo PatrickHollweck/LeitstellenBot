@@ -53,4 +53,10 @@ export abstract class Emergency {
     return `${this.constructor.name} at ${this.location ||
       "<Unknown-Location>"}`;
   }
+
+  resolve() {
+    this.dispatchedVehicles.forEach(vehicle => {
+      vehicle.state = VehicleState.Idle;
+    });
+  }
 }
