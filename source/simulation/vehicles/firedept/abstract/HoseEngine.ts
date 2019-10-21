@@ -1,4 +1,4 @@
-import { Station } from "../../Station";
+import { Station } from "../../../Station";
 import { FireEngine } from "./FireEngine";
 
 export abstract class HoseEngine extends FireEngine {

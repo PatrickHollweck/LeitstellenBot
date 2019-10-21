@@ -1,5 +1,5 @@
 import { Station } from "../../Station";
-import { HoseEngine } from "./HoseEngine";
+import { HoseEngine } from "./abstract/HoseEngine";
 
 export class LF20 extends HoseEngine {
   constructor(station: Station) {

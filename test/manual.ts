@@ -5,7 +5,7 @@ import { HouseFire } from "../source/simulation/emergencies/HouseFire";
 import { Station } from "../source/simulation/Station";
 
 import { LF20 } from "../source/simulation/vehicles/firedept/LF20";
-import { FireLadder } from "../source/simulation/vehicles/firedept/FireLadder";
+import { FireLadder } from "../source/simulation/vehicles/firedept/abstract/FireLadder";
 
 const s = new Simulation();
 

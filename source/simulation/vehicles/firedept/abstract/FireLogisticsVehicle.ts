@@ -1,7 +1,7 @@
-import { Station } from "../../Station";
 import { FireEngine } from "./FireEngine";
+import { Station } from "../../../Station";
 
-export class FireLadder extends FireEngine {
+export class FireLogisticsVehicle extends FireEngine {
   constructor(station: Station) {
     super(station);
   }

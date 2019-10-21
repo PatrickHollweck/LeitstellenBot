@@ -2,8 +2,8 @@ import { Emergency } from "./Emergency";
 
 import { VehicleRequirement } from "./VehicleRequirement";
 
-import { HoseEngine } from "../vehicles/firedept/HoseEngine";
-import { FireLadder } from "../vehicles/firedept/FireLadder";
+import { HoseEngine } from "../vehicles/firedept/abstract/HoseEngine";
+import { FireLadder } from "../vehicles/firedept/abstract/FireLadder";
 
 export class HouseFire extends Emergency {
   constructor(location?: string) {
