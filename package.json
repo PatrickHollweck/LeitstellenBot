@@ -1,0 +1,24 @@
+{
+  "name": "leitstellenbot",
+  "version": "1.0.0",
+  "description": "A Bot for the 911 Dispatcher Game \"leitstellenspiel.de\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickHollweck/LeitstellenBot.git"
+  },
+  "author": "PatrickHollweck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatrickHollweck/LeitstellenBot/issues"
+  },
+  "homepage": "https://github.com/PatrickHollweck/LeitstellenBot#readme",
+  "devDependencies": {
+    "@types/puppeteer": "^1.20.2",
+    "puppeteer": "^1.20.0",
+    "typescript": "^3.6.4"
+  }
+}
