@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeitstellenBot.Core.Entities\LeitstellenBot.Core.Entities.csproj" />
+    <ProjectReference Include="..\LeitstellenBot.Core.Logging\LeitstellenBot.Core.Logging.csproj" />
   </ItemGroup>
 
 </Project>

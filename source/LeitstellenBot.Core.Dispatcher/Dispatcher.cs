@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using LeitstellenBot.Core.Entities.Vehicles;
 using LeitstellenBot.Core.Entities.Buildings;
 using LeitstellenBot.Core.Entities.Emergencies;
+using LeitstellenBot.Core.Logging;
 
 namespace LeitstellenBot.Core.Dispatcher
 {
@@ -21,6 +22,7 @@ namespace LeitstellenBot.Core.Dispatcher
 		public void AddEmergency(Emergency emergency)
 		{
 			ActiveEmergencies.Add(emergency);
+			Log.Trace($"Emergency '{emergency}' Added! -- Total: {ActiveEmergencies.Count}");
 		}
 
 		public void Tick()
@@ -29,12 +31,15 @@ namespace LeitstellenBot.Core.Dispatcher
 			{
 				DispatchVehicles(emergency);
 			}
+
+			Log.Trace("Tick end");
 		}
 
 		public void DispatchVehicles(Emergency emergency)
 		{
 			if (!emergency.NeedsFurtherVehicles())
 			{
+				Log.Trace($"{emergency.GetName()} does not need further Vehicles...");
 				return;
 			}
 
@@ -54,12 +59,21 @@ namespace LeitstellenBot.Core.Dispatcher
 						.Where(vehicle => requirement.Matches(vehicle))
 						.ToList();
 
-					if (requirement.IsFullfilled(emergency) || !matchingAvailableVehicles.Any())
+					if (requirement.IsFullfilled(emergency))
 					{
 						break;
 					}
 
-					emergency.Dispatch(matchingAvailableVehicles.First());
+					if (!matchingAvailableVehicles.Any())
+					{
+						Log.Trace($"Missing a '{requirement.Type.Name}' to fulfill {emergency}");
+						break;
+					}
+
+					var chosen = matchingAvailableVehicles.First();
+
+					emergency.Dispatch(chosen);
+					availableVehicles.Remove(chosen);
 				}
 			}
 		}

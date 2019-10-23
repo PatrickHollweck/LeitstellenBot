@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LeitstellenBot.Core.Entities.Vehicles;
+using LeitstellenBot.Core.Logging;
 
 namespace LeitstellenBot.Core.Entities.Buildings
 {
@@ -10,16 +11,36 @@ namespace LeitstellenBot.Core.Entities.Buildings
 
 		public List<EmergencyVehicle> Vehicles { get; set; }
 
-		public Station(string name, ICollection<EmergencyVehicle> vehicles = default)
+		public static int IdCounter = 0;
+
+		public Station(string name, ICollection<EmergencyVehicle> vehicles = null)
 		{
 			Name = name;
-			Vehicles = vehicles == null ? new List<EmergencyVehicle>() : vehicles.ToList();
+			Vehicles = new List<EmergencyVehicle>();
+
+			if (vehicles == null)
+			{
+				return;
+			}
+
+			foreach (var vehicle in vehicles)
+			{
+				AssignVehicleToStation(vehicle);
+			}
 		}
 
-		public void AssignVehicle(EmergencyVehicle vehicle)
+		public void AssignVehicleToStation(EmergencyVehicle vehicle)
 		{
 			vehicle.SetStation(this);
+			vehicle.Name = IdCounter++.ToString();
 			Vehicles.Add(vehicle);
+
+			Log.Trace($"Added {vehicle} to {this}");
+		}
+
+		public override string ToString()
+		{
+			return $"{Name}";
 		}
 	}
 }

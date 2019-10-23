@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+
 using LeitstellenBot.Core.Entities.Vehicles;
+
+using LeitstellenBot.Core.Logging;
 
 namespace LeitstellenBot.Core.Entities.Emergencies
 {
@@ -41,8 +44,19 @@ namespace LeitstellenBot.Core.Entities.Emergencies
 		public void Dispatch(EmergencyVehicle vehicle)
 		{
 			vehicle.Status = VehicleStatus.Enroute;
-
 			AssignedVehicles.Add(vehicle);
+
+			Log.Trace($"Dispatched '{vehicle}' to {GetName()}");
+		}
+
+		public string GetName()
+		{
+			return this.GetType().Name;
+		}
+
+		public override string ToString()
+		{
+			return $"{GetName()}";
 		}
 	}
 }
