@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 using LeitstellenBot.Core.Vehicles;
 
 namespace LeitstellenBot.Core.Emergencies
@@ -13,6 +13,23 @@ namespace LeitstellenBot.Core.Emergencies
 		{
 			Type = type;
 			Amount = amount;
+		}
+
+		public bool Matches(Type given)
+		{
+			return given.IsSubclassOf(Type);
+		}
+
+		public bool Matches(object given)
+		{
+			return Matches(given.GetType());
+		}
+
+		public bool IsFullfilled(Emergency emergency)
+		{
+			var matchingAssigned = emergency.AssignedVehicles.Where(Matches).Count();
+
+			return matchingAssigned >= Amount;
 		}
 
 		public static VehicleRequirement Create<T>(int amount)

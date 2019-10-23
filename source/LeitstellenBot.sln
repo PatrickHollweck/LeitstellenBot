@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeitstellenBot.Core.Buildin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeitstellenBot.Core.Emergencies", "LeitstellenBot.Core.Emergencies\LeitstellenBot.Core.Emergencies.csproj", "{38E20FCC-216A-44A0-B52E-709F6C9D4D8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeitstellenBot.Test", "LeitstellenBot.Test\LeitstellenBot.Test.csproj", "{7013B2AB-B14F-498D-82D2-09C743A9A710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{38E20FCC-216A-44A0-B52E-709F6C9D4D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38E20FCC-216A-44A0-B52E-709F6C9D4D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38E20FCC-216A-44A0-B52E-709F6C9D4D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7013B2AB-B14F-498D-82D2-09C743A9A710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7013B2AB-B14F-498D-82D2-09C743A9A710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7013B2AB-B14F-498D-82D2-09C743A9A710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7013B2AB-B14F-498D-82D2-09C743A9A710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
