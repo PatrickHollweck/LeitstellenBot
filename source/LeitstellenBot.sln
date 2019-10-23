@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeitstellenBot.Core.Vehicles", "LeitstellenBot.Core.Vehicles\LeitstellenBot.Core.Vehicles.csproj", "{FB553DD4-2E41-4EC2-9A65-3E9D98224BC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeitstellenBot.Runner.Terminal", "LeitstellenBot.Runner.Terminal\LeitstellenBot.Runner.Terminal.csproj", "{55336D39-AC9A-4BF3-8C14-18A29CF8F9E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB553DD4-2E41-4EC2-9A65-3E9D98224BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB553DD4-2E41-4EC2-9A65-3E9D98224BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB553DD4-2E41-4EC2-9A65-3E9D98224BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB553DD4-2E41-4EC2-9A65-3E9D98224BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55336D39-AC9A-4BF3-8C14-18A29CF8F9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55336D39-AC9A-4BF3-8C14-18A29CF8F9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55336D39-AC9A-4BF3-8C14-18A29CF8F9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55336D39-AC9A-4BF3-8C14-18A29CF8F9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9825E34-F3BC-4F36-9547-700E0AE7FB2C}
+	EndGlobalSection
+EndGlobal
