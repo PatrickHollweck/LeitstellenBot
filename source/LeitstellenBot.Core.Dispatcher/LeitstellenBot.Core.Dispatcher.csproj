@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LeitstellenBot.Core.Buildings\LeitstellenBot.Core.Buildings.csproj" />
-    <ProjectReference Include="..\LeitstellenBot.Core.Emergencies\LeitstellenBot.Core.Emergencies.csproj" />
+    <ProjectReference Include="..\LeitstellenBot.Core.Entities\LeitstellenBot.Core.Entities.csproj" />
   </ItemGroup>
 
 </Project>

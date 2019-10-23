@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LeitstellenBot.Core.Vehicles
+﻿namespace LeitstellenBot.Core.Entities.Vehicles
 {
 	public enum VehicleStatus
 	{

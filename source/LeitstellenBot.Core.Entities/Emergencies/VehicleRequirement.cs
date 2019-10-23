@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using LeitstellenBot.Core.Vehicles;
+using LeitstellenBot.Core.Entities.Vehicles;
 
-namespace LeitstellenBot.Core.Emergencies
+namespace LeitstellenBot.Core.Entities.Emergencies
 {
 	public class VehicleRequirement
 	{

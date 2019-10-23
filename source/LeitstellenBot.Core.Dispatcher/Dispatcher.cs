@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
 
-using LeitstellenBot.Core.Buildings;
-using LeitstellenBot.Core.Emergencies;
-using LeitstellenBot.Core.Vehicles;
+using LeitstellenBot.Core.Entities.Vehicles;
+using LeitstellenBot.Core.Entities.Buildings;
+using LeitstellenBot.Core.Entities.Emergencies;
 
 namespace LeitstellenBot.Core.Dispatcher
 {

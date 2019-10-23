@@ -1,4 +1,4 @@
-﻿namespace LeitstellenBot.Core.Vehicles.FireDepartment.Specific
+﻿namespace LeitstellenBot.Core.Entities.Vehicles.FireDepartment.Specific
 {
 	public class DLK23 : FireLadder
 	{

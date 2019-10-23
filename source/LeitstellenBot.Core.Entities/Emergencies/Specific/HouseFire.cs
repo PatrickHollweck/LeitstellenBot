@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
+using LeitstellenBot.Core.Entities.Vehicles.FireDepartment.Specific;
 
-using LeitstellenBot.Core.Vehicles.FireDepartment.Specific;
-
-namespace LeitstellenBot.Core.Emergencies.Specific
+namespace LeitstellenBot.Core.Entities.Emergencies.Specific
 {
 	public class HouseFire : Emergency
 	{

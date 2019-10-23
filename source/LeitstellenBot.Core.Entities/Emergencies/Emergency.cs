@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-using LeitstellenBot.Core.Vehicles;
+﻿using System.Collections.Generic;
+using System.Linq;
+using LeitstellenBot.Core.Entities.Vehicles;
 
-namespace LeitstellenBot.Core.Emergencies
+namespace LeitstellenBot.Core.Entities.Emergencies
 {
 	public abstract class Emergency
 	{
