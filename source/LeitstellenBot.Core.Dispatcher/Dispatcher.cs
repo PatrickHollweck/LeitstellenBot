@@ -9,13 +9,18 @@ namespace LeitstellenBot.Core.Dispatcher
 {
 	public class Dispatcher
 	{
-		protected List<Building> Buildings;
-		protected List<Emergency> ActiveEmergencies;
+		public List<Building> Buildings { get; protected set; }
+		public List<Emergency> ActiveEmergencies { get; protected set; }
 
 		public Dispatcher(ICollection<Building> buildings)
 		{
 			Buildings = buildings.ToList();
 			ActiveEmergencies = new List<Emergency>();
+		}
+
+		public void AddEmergency(Emergency emergency)
+		{
+			ActiveEmergencies.Add(emergency);
 		}
 
 		public void Tick()
@@ -49,7 +54,7 @@ namespace LeitstellenBot.Core.Dispatcher
 						.Where(vehicle => requirement.Matches(vehicle))
 						.ToList();
 
-					if (requirement.IsFullfilled(emergency) || matchingAvailableVehicles.Any())
+					if (requirement.IsFullfilled(emergency) || !matchingAvailableVehicles.Any())
 					{
 						break;
 					}

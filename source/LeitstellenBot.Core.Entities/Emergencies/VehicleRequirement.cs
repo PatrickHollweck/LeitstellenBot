@@ -17,7 +17,7 @@ namespace LeitstellenBot.Core.Entities.Emergencies
 
 		public bool Matches(Type given)
 		{
-			return given.IsSubclassOf(Type);
+			return given == Type || given.IsSubclassOf(Type);
 		}
 
 		public bool Matches(object given)

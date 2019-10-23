@@ -2,6 +2,8 @@ node_modules
 dist
 
 .vs
+
 obj
+bin
 
 credentials.json

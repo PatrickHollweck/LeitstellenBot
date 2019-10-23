@@ -1,4 +1,6 @@
-﻿namespace LeitstellenBot.Core.Entities.Vehicles
+﻿using LeitstellenBot.Core.Entities.Buildings;
+
+namespace LeitstellenBot.Core.Entities.Vehicles
 {
 	public enum VehicleStatus
 	{
@@ -9,6 +11,8 @@
 
 	public abstract class EmergencyVehicle
 	{
+		public Station Station;
+
 		public VehicleStatus Status;
 
 		public int CrewSize;
@@ -17,6 +21,11 @@
 		{
 			Status = VehicleStatus.Idle;
 			CrewSize = crewSize;
+		}
+
+		public void SetStation(Station station)
+		{
+			Station = station;
 		}
 	}
 }
